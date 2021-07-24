@@ -27,6 +27,50 @@
                 <span class="head">PERSON ADDRESS FORM</span>
                 <img src="../assets/images/close.png" alt="" width="4%" class="close" style="float: right" onclick="cancel()">
             </div>
+            <div class="row-content">
+                <label class="label text" for="name">Full Name</label>
+                <input class="input" type="text" name="name" id="name">
+            </div>
+            <div class="row-content">
+                <label for="phone" class="label text">Phone Number</label>
+                <input class="input" type="tel" name="phone" id="phone">
+            </div>
+            <div class="row-content">
+                <label for="address" class="label text">Address</label>
+                <textarea class="input" name="address" id="address" style="height: 100px"></textarea>
+            </div>
+            <div class="row-content-address">
+                <div class="city-container subAddress">
+                    <label for="city">Select City</label>
+                    <select name="city" id="city">
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Banglore">Banglore</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mysore">Mysore</option>
+                        <option value="Surat">Surat</option>
+                        <option value="Gurugram">Gurugram</option>
+                    </select>
+                </div>
+                <div class="state-container subAddress">
+                    <label for="">Select State</label>
+                    <select name="state" id="state">
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Gujrat">Gujrat</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Delhi">Delhi</option>
+                    </select>
+                </div>
+                <div class="zip-container subAddress">
+                    <label for="zip">Zip Code</label>
+                    <input class="input" type="text" name="zip" id="zip">
+                </div>
+            </div>
+            <div class="add-reset">
+                <button class="addButton button" type="submit" id="addButton">Add</button>
+                <button class="resetButton button" type="reset" id="resetButton">Reset</button>
+            </div>
     </div>
 </body>
 
