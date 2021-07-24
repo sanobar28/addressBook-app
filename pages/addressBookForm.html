@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/addressBookForm.css">
+    <script src="../js/addressBookForm.js"></script>
+    <script src="../js/contact.js"></script>
     <title>Address Book App</title>
 
 </head>
@@ -30,14 +32,17 @@
             <div class="row-content">
                 <label class="label text" for="name">Full Name</label>
                 <input class="input" type="text" name="name" id="name">
+                <error-output id="name-error" class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label for="phone" class="label text">Phone Number</label>
                 <input class="input" type="tel" name="phone" id="phone">
+                <error-output id="phone-error" class="text-error" for="text"></error-output>
             </div>
             <div class="row-content">
                 <label for="address" class="label text">Address</label>
                 <textarea class="input" name="address" id="address" style="height: 100px"></textarea>
+                <error-output id="address-error" class="text-error" for="text"></error-output>
             </div>
             <div class="row-content-address">
                 <div class="city-container subAddress">
