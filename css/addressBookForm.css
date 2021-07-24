@@ -15,6 +15,7 @@ body {
 }
 
 .header-content {
+    margin-left: 100px;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
@@ -44,4 +45,55 @@ body {
     color: #42515F;
 }
 
+/* UC 2*/
 
+.form-content {
+    padding-top: 40px;
+    min-height:calc(100% -80px);
+    background-color:#f7f7f7;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid green;
+    } 
+
+    .form {
+        width: 70%;
+        background:white 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 8px;
+        opacity: 1;
+    }
+
+    .form-head {
+        font: normal normal bold 24px/37px Roboto;
+        letter-spacing: 0px;
+        color: white;
+        background-color: #008CFF;
+        text-align: center;
+        text-transform: capitalize;
+        opacity: 1;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .row-content {
+        padding-left: 100px;
+        padding-right: 100px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        align-items: left;
+        border: 0px solid green;
+        padding-top: 40px;
+    }
+
+    .head{   
+        flex: display;
+        flex : row;
+    }
+
+    .close{
+        align-items: right;
+        margin-right: 50px;;     
+    }
