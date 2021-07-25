@@ -58,11 +58,6 @@ const save = (event) => {
     }
 }
 
-//Reset form
-const resetForm = () => {
-    console.log("Reset Form");
-}
-
 const createContactInAddressBook = () => {
     let contact = new Contact();
     contact._id = new Date().getTime();
@@ -91,4 +86,28 @@ function createAndUpdateStorage(contact) {
     alert(addressBookList.toString());
     localStorage.setItem("AddressBookList", JSON.stringify(addressBookList));
     location.href = '../pages/homePage.html';
+}
+
+//reset form
+const resetForm = () => {
+    setValue('#name', '');
+    setValue('#address', '');
+    setValue('#city', '');
+    setValue('#state', '');
+    setValue('#phone', '');
+    setValue('#zip', '');
+}
+
+const setValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+
+//cancle event
+const cancel = () => {
+    try {
+        location.href = '../pages/homePage.html';
+    } catch (e) {
+        console.error(e);
+    }
 }
