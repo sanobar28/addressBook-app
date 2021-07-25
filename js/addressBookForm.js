@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 })
 
 //Save event
-function save(event) {
+const save = (event) => {
     event.preventDefault();
     event.stopPropagation();
     try {
@@ -62,13 +62,13 @@ const resetForm = () => {
     console.log("Reset Form");
 }
 
-function createContactInAddressBook() {
+const createContactInAddressBook = () => {
     let contact = new Contact();
     contact._id = new Date().getTime();
     return getFormData(contact);
 }
 
-function getFormData(contact) {
+const getFormData = (contact) => {
     contact._name = document.forms["form"]["name"].value;
     contact._address = document.forms["form"]["address"].value;
     contact._city = document.forms["form"]["city"].value;
