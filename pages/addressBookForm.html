@@ -8,26 +8,18 @@
     <link rel="stylesheet" href="../css/addressBookForm.css">
     <script src="../js/addressBookForm.js"></script>
     <script src="../js/contact.js"></script>
+    <script src="../js/homePage.js"></script>
+    <script src="../pages/homePage.html"></script>
     <title>Address Book App</title>
 
 </head>
 
 <body>
-    <!--UC1 To create header with image----->
-    <header class="header-content header">
-        <div class="logo-content">
-            <img src="../assets/images/logo.png" alt="logo">
-            <div>
-                <span class="address-text">ADDRESS</span><br>
-                <span class="address-text address-payroll">BOOK</span>
-            </div>
-        </div>
-    </header>
-    <div class="form-content">
+    <div class="body-container form-content">
         <form class="form" action="#" name="form" id ="form" onreset="resetForm()">
             <div class="form-head">
                 <span class="head">PERSON ADDRESS FORM</span>
-                <img src="../assets/images/close.png" alt="" width="4%" class="close" style="float: right"
+                <img src="../assets/images/close.png" alt="" width="4%" id="cancel-icon" class="close" style="float: right"
                     onclick="cancel()">
             </div>
             <div class="row-content">
