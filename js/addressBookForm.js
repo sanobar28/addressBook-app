@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
         try {
-            (new Contact()).firstName = name.value;
+            (new Contact()).name = name.value;
             textError.textContent = "";
         } catch (e) {
             textError.textContent = e;
@@ -46,12 +46,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
     form.addEventListener('submit', save);
 })
 
+//Save event
 function save(event) {
     event.preventDefault();
     event.stopPropagation();
-    console.log("Submit Form");
+    try {
+        let contact = createContactInAddressBook();
+    } catch (e) {
+        console.error(e);
+    }
 }
 
+//Reset form
 const resetForm = () => {
     console.log("Reset Form");
+}
+
+function createContactInAddressBook() {
+    let contact = new Contact();
+    contact._id = new Date().getTime();
+    return getFormData(contact);
+}
+
+function getFormData(contact) {
+    contact._name = document.forms["form"]["name"].value;
+    contact._address = document.forms["form"]["address"].value;
+    contact._city = document.forms["form"]["city"].value;
+    contact._state = document.forms["form"]["state"].value;
+    contact._phoneNumber = document.forms["form"]["phone"].value;
+    contact._zip = document.forms["form"]["zip"].value;
+    console.log(contact.toString());
+    return contact;
 }

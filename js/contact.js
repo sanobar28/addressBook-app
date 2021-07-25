@@ -4,16 +4,22 @@
 
 class Contact {
 
-    id;
-    get firstName() {
-        return this._firstName;
+    get id() {
+        return this._id;
     }
-    set firstName(firstName) {
+    set id(id) {
+        this._id = id;
+    }
+    get name() {
+        return this._name;
+    }
+
+    set name(name) {
         let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
-        if (nameRegex.test(firstName)) {
-            this._firstName = firstName;
+        if (nameRegex.test(name)) {
+            this._name = name;
         } else {
-            throw "first name is incorrect";
+            throw "Name is incorrect";
         }
     }
 
@@ -34,7 +40,7 @@ class Contact {
             throw "address is incorrect";
         }
     }
-    
+
     get city() {
         return this._city;
     }
@@ -68,6 +74,6 @@ class Contact {
     }
 
     toString() {
-        return "id=" + this.id + ",firstName=" + this.firstName + ",address=" + this.address + ",city=" + this.city + ",state=" + this.state + ",phoneNumber=" + this.phoneNumber + ",zip=" + this.zip;
+        return "id=" + this.id + ",name=" + this.name + ",address=" + this.address + ",city=" + this.city + ",state=" + this.state + ",phoneNumber=" + this.phoneNumber + ",zip=" + this.zip;
     }
 }
