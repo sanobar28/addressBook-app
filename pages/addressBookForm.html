@@ -24,10 +24,11 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save();return false">
+        <form class="form" action="#" name="form" id ="form" onreset="resetForm()">
             <div class="form-head">
                 <span class="head">PERSON ADDRESS FORM</span>
-                <img src="../assets/images/close.png" alt="" width="4%" class="close" style="float: right" onclick="cancel()">
+                <img src="../assets/images/close.png" alt="" width="4%" class="close" style="float: right"
+                    onclick="cancel()">
             </div>
             <div class="row-content">
                 <label class="label text" for="name">Full Name</label>
@@ -76,6 +77,7 @@
                 <button class="addButton button" type="submit" id="addButton">Add</button>
                 <button class="resetButton button" type="reset" id="resetButton">Reset</button>
             </div>
+        </form>
     </div>
 </body>
 
