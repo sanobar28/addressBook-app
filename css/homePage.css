@@ -63,8 +63,8 @@
 
 th,
 td {
-    text-align: left;
-    padding: 5px 8px;
+    text-align: center;
+    padding: 8px 8px;
 }
 
 th {
@@ -75,6 +75,7 @@ th {
     color: #FFFFFF;
     text-transform: uppercase;
     opacity: 1;
+    word-wrap: break-word;
 }
 
 tr:not(:first-child) {
