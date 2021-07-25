@@ -58,7 +58,10 @@ const createInnerHtml = () => {
  * @param {*} node 
  */
 const remove = (node) => {
-    console.log("Remove called");
+    addressList = addressList.filter(contact => contact._id != node.name);
+    localStorage.setItem("AddressBookList", JSON.stringify(addressList));
+    document.querySelector('.address-count').textContent = addressList.length;
+    createInnerHtml();
 }
 
 /**
@@ -68,3 +71,4 @@ const remove = (node) => {
 const update = (node) => {
     console.log("Update called");
 }
+
